@@ -1,0 +1,381 @@
+/* universal fonts */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  overflow-x : hidden;
+}
+
+body{
+  background-color: #ECECEC;
+}
+
+nav{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  place-items: center center;
+  background-color: white;
+  padding: 20px 50px;
+  box-shadow: 2px 1px 2px 1px rgba(234, 228, 228, 0.431);
+  animation-name: nav-load;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  transition: 0.6s ease-out;
+}
+
+.navbar-section-1{
+  display: flex;
+  align-items: center;
+  place-self: center start;
+}
+
+.navbar-section-3{
+  place-self: center end;
+}
+
+.navbar-li{
+  display: inline;
+  list-style: none;
+}
+
+.navbar-a{
+  text-decoration: none;
+  font-size: medium;
+  font-weight: 300;
+  text-transform: capitalize;
+  margin: 0px 15px;
+}
+
+.navbar-logo{
+  height: 30px;
+  width: auto;
+}
+
+.navbar-company-name{
+  /* font-family: 'Tangerine', cursive; */
+  font-size: large;
+  margin: 0px 5px;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+
+.rate{
+  border: none;
+  background-color: #B4B4EE;
+  border-radius: 15px;
+  padding: 5px 25px;
+  font-size: medium;
+}
+
+/* small navbar */
+.ul-small-navbar{
+  display: grid;
+  grid-template-columns: repeat(2,minmax(200px, 1fr));
+  place-items: center center;
+}
+
+.li-small-navbar{
+  display: inline;
+  list-style-type: none;
+  padding: 12px;
+  transition: all 0.5s ease-in-out;
+}
+
+.li-1{
+  background-color: #B4B4EE;
+  width: 100%;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  animation-name: load-color;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  position: relative;
+  border-bottom-right-radius: 1.7em;
+}
+
+.li-small-navbar:hover{
+  transition: all 0.2s ease-in-out;
+  transform: scale(110%, 110%);
+  z-index: 2;
+}
+
+.li-2{
+  background-color: #B4EEB4;
+  text-align: center;
+  width: 100%;
+  border-bottom-left-radius: 2em;
+  animation-name: load-color;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  position: relative;
+}
+
+.a-small-navbar{
+  text-decoration: none;
+  color: black;
+}
+
+/* keyframes */
+@keyframes nav-load {
+  from{
+    transition: all 0.5s;
+    transform: translateY(3%);
+  }
+  to{
+    transition: all 0.5s;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes load-color {
+  from{
+    transition: all 0.5s ease-in-out;
+    transform: scaleX(0%);
+  }
+  to{
+    transition: all 0.5s ease-in-out;
+    transform: scaleX(100%);
+  }
+}
+
+/* -------------------Footer------------------------- */
+.footer{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  background-color: #B4B4EE;
+  padding: 50px;
+  margin: 2px 0px;
+}
+
+.a-footer-links{
+  text-decoration: none;
+  list-style-type: none;
+  font-size: large;
+  font-weight: bold;
+}
+
+.footer-links{
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icons-footer{
+  height: 30px;
+  width: auto;
+  margin-left: 5px;
+}
+
+.icons-footer-1{
+  margin-left: 0px;
+}
+
+.footer-section-2-description,.footer-section-3-description{
+  font-size: large;
+  text-align: justify;
+  font-weight: bold;
+  margin-bottom: 10px;
+  word-spacing: 0.03em;
+}
+
+/* Home page */
+.intro-name-home-page{
+  font-weight: bolder;
+  font-size: xx-large;
+  text-transform: capitalize;
+  text-align: center;
+  padding: 50px;
+}
+
+.select-dashboard, .select-cart{
+  font-size: x-large;
+  text-transform: capitalize;
+  background-color: #d7dbd766;
+  padding: 45px;
+  border-radius: 20px;
+  margin: 20px 0px;
+}
+
+.heading-select-home{
+  margin: 10px 0px;
+}
+
+.button-home{
+  border: none;
+  background-color: #B4B4EE;
+  font-weight: bolder;
+  border-radius: 25px;
+  padding: 15px 45px;
+  font-size: medium;
+  margin: 5px 0px;
+}
+
+.icons-home{
+  height: 100px;
+  width: auto;
+  text-align: center;
+}
+
+.home-dashboard-cart{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  place-items: center center;
+  padding: 10px 90px 100px 90px;
+}
+
+.center-button{
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+/* dashboard */
+.dashboard-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #FFD5C9;
+  padding:  70px 0px 120px 0px;
+  gap: 20px;
+}
+
+.icons-dashboard{
+  height: 150px;
+  width: auto;
+}
+
+.heading-dashboard{
+  font-size: large;
+  font-weight: bolder;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* cart page */
+.cart-complete{
+  padding: 30px ;
+}
+
+.cart-heading{
+  font-weight: bolder;
+  font-size: x-large;
+  color: #9a9e9a;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 5px 0px 30px 0px;
+}
+
+.cart-item{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  place-items: center center;
+  background-color: #d7dbd766;
+  padding: 20px;
+  margin: 3px 0px;
+}
+
+.cart-item-name{
+  font-size: large;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.cart-counter-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px 10px;
+}
+
+.counter-minus,.count-number{
+  padding: 10px;
+  border: none;
+  font-weight: bolder;
+  font-size: large;
+  background-color: #B4EEB4;
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+
+.count-number{
+  background-color: #E4E6E4;
+}
+
+.items-section-cart{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center center;
+}
+
+.total-items-cart{
+  font-size: x-large;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-left: 10px;
+}
+
+/* sugar status page */
+.center-sugar-div{
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center center;
+  padding: 75px;
+}
+
+.sugar-status-div{
+  width: fit-content;
+}
+
+.percentage-section-sugar-status{
+  padding: 100px;
+  background-color: rgba(211, 211, 211, 0.421);
+  animation-name: container-percentage;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+.data-section-sugar-status{
+  padding: 30px 50px;
+  background-color: #B4EEB4;
+}
+
+.percentage{
+  font-size: xxx-large;
+  font-weight: bolder;
+  word-spacing: 0.01em;
+  letter-spacing: 0.01em;
+}
+
+.sugar-name{
+  font-size: x-large;
+  text-transform: capitalize;
+  margin: 10px 0px;
+  text-align: center;
+}
+
+.sugar-weight{
+  font-size: large;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+
+/* key frames */
+@keyframes container-percentage {
+  0%{
+    background-color: lightcoral;
+  }
+  25%{
+
+  }
+  50%{
+
+  }
+  75%{
+
+  }
+  100%{
+
+  }
+}
