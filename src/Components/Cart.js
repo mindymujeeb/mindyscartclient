@@ -4,7 +4,7 @@ export default function Cart({item}) {
   const [data, setData] = useState([]);
 
   const fetchUserData = () => {
-    fetch("https://mindyscartserver-production.up.railway.app/database")
+    fetch("https://mindyscartserver-production-92ec.up.railway.app/database")
       .then(response => {
         return response.json()
       })
@@ -29,7 +29,7 @@ export default function Cart({item}) {
           return(
             <div className='cart-item' key= {item._id}>
               <p className='cart-item-name'>{item.name}</p>
-              <p className='cart-item-name'>{percentage} %</p>
+              <p className='cart-item-perc'>{percentage.toFixed(2)} %</p>
             </div>
           )
         }
